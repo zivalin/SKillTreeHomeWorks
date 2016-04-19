@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "阿子的記帳本";
-    @model IEnumerable<HomeworkDay1.Models.ViewModels.MoneyViewModel>
+
 }
 <div class="well">
     <form class="form-horizontal">
@@ -41,25 +41,4 @@
 </div>
 
 <!--顯示資料-->
-
-<div class="row">
-    <div class="col-md-12">
-        <table class="table table-bordered table-hover">
-            <tr>
-                <th>#</th>
-                <th>類別</th>
-                <th>日期</th>
-                <th>金額</th>
-            </tr>
-          @foreach (var item in Model)
-          { <tr>
-                <td>@item.SR </td>
-                <td>@item.IO</td>
-                <td>@item.CHDT.ToString("yyyy/MM/dd")</td>
-                <td>@item.MNY</td>
-            </tr>
-            }
-         
-        </table>
-    </div>
-</div>
+@Html.Action("ShowGridData")

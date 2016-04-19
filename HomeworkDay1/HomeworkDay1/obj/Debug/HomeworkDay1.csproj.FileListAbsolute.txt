@@ -38,3 +38,7 @@ C:\88_Sync\6daja-ASP.NET MVC5 實戰訓練營\Day1_SkilltrreeMVC\HomeworkDay1\Ho
 C:\88_Sync\6daja-ASP.NET MVC5 實戰訓練營\Day1_SkilltrreeMVC\HomeworkDay1\HomeworkDay1\obj\Debug\HomeworkDay1.csprojResolveAssemblyReference.cache
 C:\88_Sync\6daja-ASP.NET MVC5 實戰訓練營\Day1_SkilltrreeMVC\HomeworkDay1\HomeworkDay1\obj\Debug\HomeworkDay1.dll
 C:\88_Sync\6daja-ASP.NET MVC5 實戰訓練營\Day1_SkilltrreeMVC\HomeworkDay1\HomeworkDay1\obj\Debug\HomeworkDay1.pdb
+C:\88_Sync\6daja-ASP.NET MVC5 實戰訓練營\Day1_SkilltrreeMVC\HomeworkDay1\HomeworkDay1\bin\EntityFramework.dll
+C:\88_Sync\6daja-ASP.NET MVC5 實戰訓練營\Day1_SkilltrreeMVC\HomeworkDay1\HomeworkDay1\bin\EntityFramework.SqlServer.dll
+C:\88_Sync\6daja-ASP.NET MVC5 實戰訓練營\Day1_SkilltrreeMVC\HomeworkDay1\HomeworkDay1\bin\EntityFramework.xml
+C:\88_Sync\6daja-ASP.NET MVC5 實戰訓練營\Day1_SkilltrreeMVC\HomeworkDay1\HomeworkDay1\bin\EntityFramework.SqlServer.xml

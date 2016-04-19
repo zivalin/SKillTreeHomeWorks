@@ -4,29 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using HomeworkDay1.Models.ViewModels;
+using HomeworkDay1.Models;
 
 namespace HomeworkDay1.Controllers
 {
     public class HomeController : Controller
     {
+        private SkillTreeHomeworkEntities db = new SkillTreeHomeworkEntities();
         public ActionResult Index()
         {
-            Random rnd = new Random();
-            List<MoneyViewModel> listDatas = new List<MoneyViewModel>();
-
-            for (int i = 0; i < 10; i++)
-            {
-                listDatas.Add(
-                    new MoneyViewModel()
-                    {
-                        SR = i,
-                        IO = (i / 2) == 1 ? "支出" : "收入",
-                        CHDT = DateTime.Now.AddDays(rnd.Next(1, 10)),
-                        MNY = rnd.Next(1, 10) * (i+1) * 100
-                    }
-                );
-            }
-            return View(listDatas);
+            
+            return View();
         }
 
         public ActionResult About()
@@ -41,6 +29,33 @@ namespace HomeworkDay1.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+      
+        [ChildActionOnly]
+        public ActionResult ShowGridData()
+        {
+            var dbs = db.AccountBook.Select(v =>
+             new
+             {
+                 SR = v.Id.ToString(),
+                 ChangType = v.Categoryyy == 1 ? "支出" : "收入",
+                 ChangDate = v.Dateee,
+                 Money = v.Amounttt
+             });
+
+            List<MoneyViewModel> listDatas = new List<MoneyViewModel>();
+            foreach (var row in dbs)
+            {
+                listDatas.Add(
+                    new MoneyViewModel
+                    {
+                        SR = row.SR,
+                        ChangType = row.ChangType,
+                        ChangDate = row.ChangDate,
+                        Money = row.Money
+                    });
+            } 
+            return View(listDatas);
         }
     }
 }

@@ -13,18 +13,18 @@ namespace HomeworkDay1.Models.ViewModels
         /// <summary>
         /// 序號
         /// </summary>
-        public int SR { get; set; }
+        public string SR { get; set; }
         /// <summary>
         /// 異動別
         /// </summary>
-        public string IO { get; set; }
+        public string ChangType { get; set; }
         /// <summary>
         /// 異動日期
         /// </summary>
-        public DateTime CHDT { get; set; }
+        public DateTime ChangDate { get; set; }
         /// <summary>
         /// 金額
         /// </summary>
-        public decimal MNY { get; set; }  
+        public decimal Money { get; set; }  
     }
 }
