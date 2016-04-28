@@ -1,9 +1,8 @@
 ﻿
-@{   
+@{
     @model IEnumerable<HomeworkDay1.Models.ViewModels.MoneyViewModel>
     Layout = null;
 }
-
 <div class="row">
     <div class="col-md-12">
         <table class="table table-bordered table-hover">
@@ -15,12 +14,21 @@
             </tr>
             @foreach (var item in Model)
             {
-            <tr>
-                <td>@item.SR </td>
-                <td>@item.ChangType</td>
-                <td>@item.ChangDate.ToString("yyyy/MM/dd")</td>
-                <td>@item.Money</td>
-            </tr>
+                <tr>
+                    <td>@item.SR </td>
+                    <td>
+                      @if (@item.IO == "支出")
+                      {
+                        <span style="color:red">@item.IO</span>
+                      }
+                      else
+                      {
+                        <span style="color:blue">@item.IO</span>
+                      }
+                    </td>
+                    <td>@item.CHDT.ToString("yyyy/MM/dd")</td>
+                    <td>@item.MNY</td>
+                </tr>
             }
         </table>
     </div>
